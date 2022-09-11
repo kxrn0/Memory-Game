@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Start from "./components/Start/Start";
 import Error from "./components/Error/Error";
@@ -34,6 +34,12 @@ function App() {
     shown: true,
   });
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const tempImg = document.createElement("img");
+
+    tempImg.src = noNet;
+  }, []);
 
   function load_images(level) {
     const requests = [];
