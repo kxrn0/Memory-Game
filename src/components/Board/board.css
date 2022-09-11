@@ -1,0 +1,92 @@
+.board {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image {
+  --width: 300px;
+  --height: 350px;
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  transition: transform 0.33s, box-shadow 0.33s;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  max-width: var(--width);
+  max-height: var(--height);
+  position: relative;
+  border-radius: 5px;
+}
+
+.image:active {
+  transform: scale(0.95);
+}
+
+.image .expand {
+  background-color: rgba(240, 226, 226, 0.85);
+  background-image: url("../../assets/expand.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.board .display {
+  background: rgb(4, 4, 50, 0.15);
+  z-index: 1;
+}
+
+.board .display img {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.board .display .close {
+  background: rgba(244, 245, 249, 0.5);
+  background-image: url("../../assets/close.svg");
+  background-size: cover;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+}
+
+@media screen and (hover: hover) {
+  .image:hover {
+    box-shadow: 0 0 10px 1px rgb(235, 148, 155);
+    transform: scale(1.025);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .image {
+    --width: 150px;
+    --height: 150px;
+  }
+}

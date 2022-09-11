@@ -1,0 +1,10 @@
+.loading {
+  background: rgb(250, 250, 195);
+  z-index: 1;
+  text-align: center;
+}
+
+.loading .loading-icon {
+  background: #000;
+  border-radius: 50%;
+}
