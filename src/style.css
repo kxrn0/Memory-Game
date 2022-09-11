@@ -95,4 +95,8 @@ body {
   .fs-large {
     font-size: 3rem;
   }
+
+  .hidden {
+    top: -150%;
+  }
 }
