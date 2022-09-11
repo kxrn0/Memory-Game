@@ -8,6 +8,7 @@ import Board from "./components/Board/Board";
 import { nanoid } from "nanoid";
 
 import "./style.css";
+import noNet from "./assets/wifi.svg";
 
 import shuffle from "./utilities/shuffle";
 import make_request from "./utilities/request";
@@ -129,7 +130,7 @@ function App() {
         <Start state={startScreenState} handle_screen={handle_start_screen} />
       )}
       {isLoading && <Loading />}
-      {error && <Error handle={handle_error} />}
+      {error && <Error handle={handle_error} noNet={noNet} />}
       <Navbar level={levelData.currentLevel} score={score} />
       <Board images={levelData.images} click_image={click_image} />
     </div>

@@ -1,7 +1,6 @@
 import "./error.css";
-import noNet from "../../assets/wifi.svg";
 
-export default function Error({handle}) {
+export default function Error({handle, noNet}) {
     return (
         <div className={"error maxxed"}>
             <div className="content">
